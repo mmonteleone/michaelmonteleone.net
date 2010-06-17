@@ -1,3 +1,5 @@
+# adapted from  http://github.com/appden/appden.github.com/blob/master/Rakefile
+
 require 'packr'
 require 'rake/clean'
 
