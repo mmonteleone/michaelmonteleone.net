@@ -1,0 +1,32 @@
+---
+layout: nil
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>COLOR SCRUB - a quick view of your palette</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/colorscrub.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
+</head>
+<body>
+
+<h1>Color Scrub</h1>
+<h2>A quick view of your palette</h2>
+
+<form action="" method="get">
+    <textarea name="source" id="source" data-minrows="1" data-maxrows="15" data-defaultvalue="Paste in either a URL to a document (CSS, XML, etc) containing colors (hex, rgb, etc) or a block of raw text..."></textarea>
+    <a href="#" id="scrub">Scrub</a>
+    <span id="scrubbing">Scrubbing</span>
+    <div id="result">
+        <span id="message"></span>  <a href="#" title="Permalink to these results" id="permalink">#</a>
+    </div>
+</form>
+
+<ul id="colors"></ul>
+
+<p id="footer">&copy;2010 <a href="http://michaelmonteleone.net">Michael Monteleone</a></p>
+{% include analytic.html %}
+</body>
+</html>

@@ -1,0 +1,46 @@
+---
+layout: home
+---
+
+<div class="banner">
+
+h1. Hello.
+
+</div>
+
+<div class="colophon">
+
+"Michael Monteleone (More About Michael)":/about/ is a software developer and designer from New Orleans who occasionally speaks in the third person.
+
+After twelve years of crafting corners of the Web for others and two years after blogs "died ('Wired' Confirms It)":http://www.wired.com/entertainment/theweb/magazine/16-11/st_essay/, he knew it was time to build his own.
+
+He's written "more (More About Michael)":/about/ about himself, but would rather hear from "you (Speaking of dead technology, send me an email!)":mailto:michael@michaelmonteleone.net
+
+</div>
+
+
+<div class="section">
+
+h4. He recently wrote
+
+{% for post in site.posts limit: 3 %}
+* "{{ post.title }}":{{ post.url }} <span class="line-meta">{{ post.date | date: "%A, %B %d, %Y" }}</span>
+{% endfor %} 
+
+<span class="more">"Full Archive &rarr;(View the Full Archives)":/journal/</span>
+
+</div>
+
+<div class="section">
+
+h4. He recently released
+
+ * "DynamicBuilder":http://github.com/mmonteleone/nate <span class="line-meta">Suspiciously pleasant XML construction API for C# 4, inspired by  Ruby's Builder</span>
+ * "Delorean":http://github.com/mmonteleone/delorean <span class="line-meta">Flux capacitor for accurately faking time-bound JavaScript for testing purposes, including complex interactions of timeouts, intervals, and dates. </span>
+ * "Pavlov":http://github.com/mmonteleone/pavlov <span class="line-meta">Behavioral API over QUnit and More</span> 
+ * "jQuery.safetynet":http://github.com/mmonteleone/jquery.safetynet <span class="line-meta">A smarter in-browser "unsaved changes" warning plugin</span> 
+ * "Nate":http://github.com/mmonteleone/nate <span class="line-meta">Simple little fluent state machine for C#</span>
+
+<span class="more">"More Projects &rarr;(View All Projects)":/projects/</span>
+
+</div>

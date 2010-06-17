@@ -1,0 +1,30 @@
+# Block directory indexes
+Options -Indexes 
+
+# Custom error doc
+ErrorDocument 404 /notfound/
+ErrorDocument 403 /notfound/
+
+# Redirection of www.* to non-www.*
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.michaelmonteleone.net
+RewriteRule (.*) http://michaelmonteleone.net/ [R=301,L]
+
+Header set Served-By "Robert'); DROP TABLE Students;--"
+Header unset X-Powered-By
+
+# Caching 
+# Header unset ETag
+# FileETag None
+# <FilesMatch "(?i)^.*\.(ico|html|jpg|jpeg|png|gif|js|css|ttf|eot|svg)$">
+# Header unset Last-Modified
+# Header set Expires "Fri, 21 Dec 2015 00:00:00 GMT"
+# Header set Cache-Control "public, no-transform"
+# </FilesMatch>
+
+# GZip
+<IfModule mod_deflate.c>
+<FilesMatch "\.(html|js|css|xml)$">
+SetOutputFilter DEFLATE
+</FilesMatch>
+</IfModule>

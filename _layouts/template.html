@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    {% if page.title %}
+    <title>{{ page.title }} &mdash; {{ site.title }}</title>
+    {% else %}
+    <title>{{ site.title }}</title>
+    {% endif %}
+    {% assign description = site.description %}
+    {% if page.description %}
+        {% assign description = page.description %}
+    {% endif %}
+    <meta name="description" content="{{ description }}" />
+    {% assign keywords = site.keywords %}
+    {% if page.keywords %}
+        {% assign keywords = page.keywords %}
+    {% endif %}
+    <meta name="keywords" content="{{ keywords | join: "," }}" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <link rel="alternate" type="application/atom+xml" title="{{ site.author.name }}" href="/feed.xml">
+    <link href="{{ site.author.openid.server }}" rel="openid2.provider" />
+    <link href="{{ site.author.openid.delegate }}" rel="openid2.local_id" />
+    <link href="{{ site.author.openid.server }}" rel="openid.server" />
+    <link href="{{ site.author.openid.delegate }}" rel="openid.delegate" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/assets/themes/default/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/themes/default/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/themes/default/images/ios.png"/>    
+    <meta name="viewport" content="width=800" />    
+    {% for stylesheet in site.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+    {% endfor %}
+    {% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" />            
+    {% endfor %}    
+    <!--[if IE]>
+    <script src="/assets/themes/default/js/html5.js"></script>
+    <![endif]-->    
+    {% for script in site.scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+    {% for script in page.scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}    
+</head>
+<body class="{{ page.bodyclass }}">
+<div id="wrapper">
+<div id="inner_wrapper">    
+    <div id="container">          
+        <header id="title">
+            <h1><a href="/">{{ site.title }}</a></h1>
+        </header>        
+        <nav id="main_nav">
+            <ul>
+                {% for section in site.sections %}
+                <li><a href="/{{ section }}/" class="{{ section }}">{{ section }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>        
+        <div id="content">
+        {{ content }}
+        </div>        
+    </div>    
+    <div id="footer-wrapper">
+        <footer>
+            <section title="Colophon" class="colophon" itemscope itemtype="http://data-vocabulary.org/Person">
+                <h1>Explain Yourself</h1>
+                <p><span itemprop="name">Michael Monteleone</span> is a <span itemprop="role">software developer and designer</span> from <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">New Orleans</span></span>.  This is his site.  <a href="/about/" title="More about Michael">Read on.</a></p>
+                <p>Also,</p>
+                <nav>
+                    <ul>
+                        <li class="hide"><a itemprop="url" href="/" title="You are Here">Site</a></li>
+                        <li><a href="{{ site.author.twitter }}" title="Pithy Nonsense">Twitter</a></li>
+                        <li><a href="{{ site.author.github }}" title="The Secret Codes">GitHub</a></li>
+                        <li><a href="{{ site.author.delicious }}" title="Bookmarks">Delicious</a></li>
+                        <li><a href="{{ site.author.facebook }}" title="Be my friend, total stranger.">Facebook</a></li>
+                        <li><a href="mailto:{{ site.author.email }}" title="You remember email, right?">Email</a></li>
+                        <li><a href="/feed.xml" title="Just kidding, it's an Atom feed">RSS</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section title="Delicious Bookmarks" class="delicious">
+                <h1><a href="{{ site.author.delicious }}" title="Delicious Bookmarks">Read All Over</a></h1>
+                <nav></nav>
+            </section>
+            <section title="Twitter Stream" class="twitter">
+                <h1><a href="{{ site.author.twitter }}" title="Twitter Stream">@namelessmike</a></h1>
+                <nav></nav>
+            </section>
+            <section title="Copyright" class="attribution">
+                <p>Copyright &copy; {{ site.time | date: "%Y" }} {{ site.author.name }}.  <a href="http://creativecommons.org/licenses/by/3.0/us/">Some rights reserved</a>.</p>
+            </section>
+        </footer>
+        <div style="clear:both"></div>
+    </div>    
+</div>
+</div>
+{% include analytic.html %}
+</body>
+</html>
