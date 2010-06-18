@@ -67,6 +67,7 @@ jQuery(function($){
 });
 
 
+
 (function($){
     $.fn.delicious = function(options) {
         var settings = $.extend({}, $.fn.delicious.defaults, options || {});        
@@ -556,11 +557,25 @@ jQuery(function($){
             top: settings.from + 'px'});
         var self = this;
         setTimeout(function(){
-            self.animate({
-                top: settings.to + 'px',
-                opacity: 1.0 },
-                {duration:settings.duration, 
-                    easing:settings.easing});
+            self.animate(
+                {
+                    top: settings.to + 'px',
+                    opacity: 1.0 
+                },
+                {
+                    duration:settings.duration, 
+                    easing:settings.easing,
+                    // ugly hack to avoid IE issue where 
+                    // bold cleartyped text which has had its
+                    // opacity changed ends up looking jagged
+                    // and un-antialiased.  Removing the 'filter'
+                    // attribute at the end of it returns to normal
+                    complete: function(){
+                        if ($.browser.msie) {
+                            this.style.removeAttribute('filter');                        
+                        }
+                    }                    
+                });
             
         }, 100);
         

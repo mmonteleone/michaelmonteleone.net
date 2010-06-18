@@ -515,10 +515,6 @@ body.home #content div.banner {
         text-indent: -12pt;
         position: relative;
         top: -10px;
-    	opacity: 0;
-    	filter: alpha(opacity=0);
-    	-ms-filter: "alpha(opacity=0)";
-    	-moz-opacity: 0;
     	}
 body.home #content div.colophon {
     margin-top: 30px;
