@@ -23,11 +23,11 @@ sections:
  - about
  - journal 
 stylesheets:
- - /assets/themes/default/css/screen.css
+ - /assets/themes/default/css/screen.css?671298125=671298125
  - /assets/themes/default/css/print.css
 scripts:
  - http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js
- - /assets/themes/default/js/site.min.js
+ - /assets/themes/default/js/site.min.js?671298125=671298125
 colors:
     highlights:
         blue: '#009ff7'

@@ -96,6 +96,9 @@ a {
 .hide {
     display: none;
     }
+.strike {
+    text-decoration: line-through;
+    }
 time,    
 article,
 header,
@@ -237,6 +240,21 @@ nav#main_nav {
     width: 640px;
     overflow: hidden;
     }
+    ul code, 
+    ol code, 
+    p code {
+        /*
+        background-color: {{ page.theme.black }};
+        color: {{ page.theme.white }};
+        padding: 3px;
+        position: relative;
+        top: -1px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;        
+        */
+        font-size: 11pt;
+        }
     #content h1 {
         font-family: 'Helvetica Neue', Helvetica, Arial;
         font-weight: bold;
@@ -279,10 +297,24 @@ nav#main_nav {
     #content article blockquote,
     #content article time,
     #content article ul,
+    #content article ol,
+    #content article h1,
+    #content article h2,
+    #content article h3,
+    #content article pre {
+        margin-bottom: 18pt;
+        }
+        #content article header h1, 
+        #content article header h2, 
+        #content article header h3 {
+            margin-bottom: 12pt;
+            }       
+    #content article p,
+    #content article blockquote,
+    #content article time,
+    #content article ul,
     #content article ol 
         {
-        margin-top: 1em;
-        margin-bottom: 1.3em;		
 		font-family: times, 'Times New Roman', times-roman, serif;
         font-size: 14pt;
 		line-height: 1.5em;
@@ -723,4 +755,4 @@ pre {
     .vc { color: {{ page.theme.white }} } 
     .vg { color: {{ page.theme.white }} } 
     .vi { color: {{ page.theme.white }} } 
-    .il { color: {{ page.theme.purple }} } 
+    .il { color: {{ page.theme.purple }} }
