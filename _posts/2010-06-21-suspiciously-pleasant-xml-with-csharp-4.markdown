@@ -342,3 +342,5 @@ Ongoing
 Even if this dynamic hipster jazz isn't your thing, it's always useful to learn from other languages' cultural approaches to solving universal programming problems.
 
 DynamicBuilder is a work in progress.  Please feel free to fork away.  
+
+<a href="http://www.dotnetkicks.com/kick/?url=http%3a%2f%2fmichaelmonteleone.net%2f2010%2f06%2f21%2fsuspiciously-pleasant-xml-with-csharp-4%2f"><img src="http://www.dotnetkicks.com/Services/Images/KickItImageGenerator.ashx?url=http%3a%2f%2fmichaelmonteleone.net%2f2010%2f06%2f21%2fsuspiciously-pleasant-xml-with-csharp-4%2f" border="0" alt="kick it on DotNetKicks.com" /></a>
