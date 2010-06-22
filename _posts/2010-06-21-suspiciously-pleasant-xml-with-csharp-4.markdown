@@ -74,7 +74,7 @@ Introducing [DynamicBuilder](http://github.com/mmonteleone/dynamicbuilder)
 
 So, now with C# 4's [dynamic](http://msdn.microsoft.com/en-us/library/dd264736.aspx) type and the [DynamicObject](http://msdn.microsoft.com/en-us/library/system.dynamic.dynamicobject.aspx) class, .NET has a mostly-workable `method_missing` of its own.  And with the help of a smidgen of code that is [DynamicBuilder](http://github.com/mmonteleone/dynamicbuilder), we can accomplish the same API.
 
-You can be learn it in five minutes and integrate it into existing code in even less time as it's just a single small class.
+You learn it in five minutes and integrate it into existing code in even less time as it's just a single small class.
 
 ### Examples
 
@@ -342,5 +342,3 @@ Ongoing
 Even if this dynamic hipster jazz isn't your thing, it's always useful to learn from other languages' cultural approaches to solving universal programming problems.
 
 DynamicBuilder is a work in progress.  Please feel free to fork away.  
-
-<a href="http://www.dotnetkicks.com/kick/?url=http%3a%2f%2fmichaelmonteleone.net%2f2010%2f06%2f21%2fsuspiciously-pleasant-xml-with-csharp-4%2f"><img src="http://www.dotnetkicks.com/Services/Images/KickItImageGenerator.ashx?url=http%3a%2f%2fmichaelmonteleone.net%2f2010%2f06%2f21%2fsuspiciously-pleasant-xml-with-csharp-4%2f" border="0" alt="kick it on DotNetKicks.com" /></a>
