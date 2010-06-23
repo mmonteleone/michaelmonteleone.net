@@ -3,6 +3,7 @@ title: Suspiciously Pleasant XML with C# 4
 tags:  []
 layout: post
 description: Description Content
+comments: true
 ---
 
 So it goes with the digestive processes of programming trends, and dynamic delegation has reached the crowded mainland shores of the .NET Framework in the form of C# 4's [dynamic](http://msdn.microsoft.com/en-us/library/dd264736.aspx) type.  Though it was nothing new even *then*, six years ago many of us got our first hit of dynamic delegation through Ruby metaprogramming in Rails.  The very notion that something like this: 
@@ -74,7 +75,7 @@ Introducing [DynamicBuilder](http://github.com/mmonteleone/dynamicbuilder)
 
 So, now with C# 4's [dynamic](http://msdn.microsoft.com/en-us/library/dd264736.aspx) type and the [DynamicObject](http://msdn.microsoft.com/en-us/library/system.dynamic.dynamicobject.aspx) class, .NET has a mostly-workable `method_missing` of its own.  And with the help of a smidgen of code that is [DynamicBuilder](http://github.com/mmonteleone/dynamicbuilder), we can accomplish the same API.
 
-You learn it in five minutes and integrate it into existing code in even less time as it's just a single small class.
+You can learn it in five minutes and integrate it into existing code in even less time as it's just a single small class.
 
 ### Examples
 

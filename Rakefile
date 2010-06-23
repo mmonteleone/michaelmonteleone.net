@@ -57,6 +57,7 @@ title: #{title}
 tags:  [#{tags}]
 layout: post
 description: Description Content
+comments: false
 ---
 
 END

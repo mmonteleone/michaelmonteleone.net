@@ -378,7 +378,9 @@ nav#main_nav {
                 width: 3000px;
                 overflow: hidden;
                 }        
-                    
+     #content div#disqus_thread {
+        margin-top: 80px; 
+        }
      #content article p a,
      #content article ul a,
      #content article ol a {
