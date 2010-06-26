@@ -100,7 +100,7 @@ x.hello("world");
 dynamic x = new Xml();    
 
 // passing an anonymous object resolves to xml attributes
-x.user("John Doe", new { username="jdoe" = 2, usertype = "admin" });
+x.user(new { username="jdoe", usertype="admin" }, "John Doe");
 {% endhighlight %}
 
 *yields*
@@ -119,6 +119,7 @@ x.user(Xml.Fragment(u => {
     u.firstname("John");
     u.lastname("Doe");
     u.email("jdoe@example.org");
+    u.phone(new { type="cell" }, "(985) 555-1234");
 }));
 {% endhighlight %}
 
@@ -129,6 +130,7 @@ x.user(Xml.Fragment(u => {
     <firstname>John</firstname>
     <lastname>Doe</lastname>
     <email>jdoe@example.org</email>
+    <phone type="cell">(985) 555-1234</phone>
 </user>
 {% endhighlight %}
 
@@ -157,8 +159,6 @@ xml.feed(new { xmlns = "http://www.w3.org/2005/Atom" }, Xml.Fragment(feed =>
     }));
 
     // iterate through the posts, adding them to the feed
-    // NOTE: this part could NOT have been done simply via nested
-    // object initializers with System.Xml.Linq types
     foreach (var post in posts)
     {
         feed.entry(Xml.Fragment(entry =>
@@ -275,7 +275,7 @@ XElement user = new XElement("user",
 );
 {% endhighlight %}
 
-While a significant improvement, it can still be troublesome to use when the document must be *generated* programmatically.  The simple case of iterating over a list of blog posts in the above Atom feed example is not possible with the XElement object initialization syntax without building the document in multiple separate looped chunks and then stitching the parts together.  DynamicBuilder's use of anonymous delegates instead of object initialization allows for all manner of imaginable logic to be employed within a single, unified, XML creation.  DynamicBuilder's anonymous object-to-attributes are also terser than instantiating multiple `XAttribute`s and `XElement`s all over the place.
+While a significant improvement, it can still be awkward and unnatural to use when the document must be generated logically, as everything must be declared via object initialization.  DynamicBuilder's choice of anonymous delegates over object initialization allows for all manner of imaginable logic to be employed within a single, unified, XML creation block.  Coupled with DynamicBuilder's anonymous object-to-attributes mapping, and the syntax is also much thinner and closer to the resulting markup than nested `XElement` noise.
 
 LINQ to XML is still probably the simplest XML *querying/consumption* mechanism.  Also, `DynamicBuilder.Xml` actually uses `System.Xml.Linq` types internally to model its XML, and can easily expose it via its `ToXElement()` method.
 

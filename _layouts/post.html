@@ -2,10 +2,6 @@
 layout: template
 bodyclass: journal
 ---
-<script type="text/javascript">
-	var disqus_awesome = true; 
-	var disqus_developer = 1;
-</script>
 <article>
     <header>
         <h1><a href="{{ page.url }}" rel="bookmark" title="link to this post">{{ page.title }}</a></h1>
@@ -17,9 +13,7 @@ bodyclass: journal
 {% if page.comments %}
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-  /**
-    * var disqus_identifier; [Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
-    */
+  var disqus_identifier = "{{ page.url }}";
   (function() {
    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
    dsq.src = 'http://michaelmonteleone.disqus.com/embed.js';
