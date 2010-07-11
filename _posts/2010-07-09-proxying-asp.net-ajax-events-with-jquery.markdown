@@ -2,8 +2,8 @@
 title: Proxying ASP.NET AJAX events with jQuery
 tags:  []
 layout: post
-description: Description Content
-comments: false
+description: Proxying ASP.NET AJAX events with jQuery Special Events
+comments: true
 ---
 
 [MVC](http://www.asp.net/mvc) is great, but ASP.NET *remains*.  Web Forms walk *amongst us*.  Not alive, *not dead*.  (Not even [LINQ to SQL-Dead](http://blogs.msdn.com/b/adonet/archive/2008/10/29/update-on-linq-to-sql-and-linq-to-entities-roadmap.aspx).)  William Faulkner, *who never maintained a legacy ASP.NET codebase*, gets it right:

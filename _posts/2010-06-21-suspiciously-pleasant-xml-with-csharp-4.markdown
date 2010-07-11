@@ -2,7 +2,7 @@
 title: Suspiciously Pleasant XML with C# 4
 tags:  []
 layout: post
-description: Description Content
+description: Using c# 4 type dynamic to simulate Ruby's XML Builder API
 comments: true
 ---
 
