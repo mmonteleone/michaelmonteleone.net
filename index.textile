@@ -23,7 +23,7 @@ He's written "more (More About Michael)":/about/ about himself, but would rather
 
 h4. He recently wrote
 
-{% for post in site.posts limit: 3 %}
+{% for post in site.posts limit: 5 %}
 * "{{ post.title }}":{{ post.url }} <span class="line-meta">{{ post.date | date: "%A, %B %d, %Y" }}</span>
 {% endfor %} 
 

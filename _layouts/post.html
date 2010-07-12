@@ -8,6 +8,12 @@ bodyclass: journal
         <time datetime="{{ page.date | date: "%Y-%m-%d" }}" pubdate>Published {{ page.date | date: "%A, %B %d, %Y" }}</time>
     </header>
     {{ content }}        
+
+    {% if page.previous.url %} 
+    <p>
+        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&larr; {{page.previous.title}}</a>
+    </p>
+    {% endif %}
 </article>
 
 {% if page.comments %}
@@ -23,3 +29,4 @@ bodyclass: journal
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=michaelmonteleone">comments powered by Disqus.</a></noscript>
 <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 {% endif %}
+
