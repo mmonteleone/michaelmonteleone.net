@@ -12,7 +12,7 @@ comments: true
 
 But as code has grown, so have tools for its manipulation.  jQuery excels here.  It's *great* for bulk-shoveling client-side mass.  
 
-*Here's we'll see an example of this by proxying ASP.NET AJAX client-side events as native jQuery events using jQuery's Special Event API and some fancy JavaScript meta-programming.*
+*Here we'll see an example of this by proxying ASP.NET AJAX's client-side events as native jQuery events using jQuery's Special Event API and some fancy JavaScript meta-programming.*
 
 ## Scenario
 
@@ -58,7 +58,7 @@ jQuery.event.special.atlasEndRequest = {
 };
 {% endhighlight %}
 
-This will work as-is.  But special events can also have code run upon the last unbind of an event from a selection with `teardown`, or (new in 1.4) upon *each* bind and unbind of an event from a selection with `add` and `remove`.  And the [PageRequestManager](http://msdn.microsoft.com/en-us/library/bb311028.aspx) gives us [more possibly-useful events](http://msdn.microsoft.com/en-us/library/bb384136.aspx) we might want to proxy as well.  So, with a little bit of fancy meta-programming, we can support all of them, along with proper unbinding.
+This will work as-is.  But special events can also have code run upon the last unbind of an event from a selection with `teardown`, or (new in 1.4) upon *each* bind and unbind of an event from a selection with `add` and `remove`.  And the [PageRequestManager](http://msdn.microsoft.com/en-us/library/bb311028.aspx) gives us [more possibly-useful events](http://msdn.microsoft.com/en-us/library/bb384136.aspx) (initializeRequest, beginRequest, endRequest, pageLoading, pageLoaded) we might want to proxy as well.  So, with a little bit of fancy meta-programming, we can support all of them, along with proper unbinding.
 
 {% highlight javascript %}
 (function ($) {
@@ -118,7 +118,7 @@ A bit of code, but dig in.  You're smart.  And two extra credit points:
 It provides shortcut methods for binding and triggering the events, so 
 
 {% highlight javascript %}
-$('document').bind('atlasEndEvent', function(){ 
+$('document').bind('atlasEndRequest', function(){ 
     console.log('update complete!');
 });
 {% endhighlight %}
@@ -132,6 +132,15 @@ $('document').atlasEndRequest(function(){
 {% endhighlight %}
 
 And it uses some fanciness with a self-reassigning-function to ensure that absence of the Sys.WebForms.PageRequestManager will not break the plugin, and getting its instance will only necessarily be called once.  It's a micro-optimization for sure, but still a fun example.
+
+If you are still interested in the `sender` and `args` parameters passed back from the PageRequestManager to its event handler, those are still exposed via the optional `data` parameter.
+
+{% highlight javascript %}
+$('document').bind('atlasEndRequest', function(e, data){ 
+    console.log(data.args);
+    console.log(data.sender);
+});
+{% endhighlight %}
 
 Even if you don't find this particularly useful or practical, hopefully it opens your mind to JavaScript's yoga-like flexibility.  [\_why](http://rubyforge.org/pipermail/camping-list/2008-May/000719.html):
 
