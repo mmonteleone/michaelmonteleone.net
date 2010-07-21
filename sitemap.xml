@@ -16,16 +16,16 @@ layout: nil
     <url>
         <loc>{{ site.url }}/{{ section }}/</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     {% endfor %}        
     {% for post in site.posts %}
     <url>
         <loc>{{ site.url }}{{ post.url }}</loc>
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
     </url>
     {% endfor %}    
 </urlset>
