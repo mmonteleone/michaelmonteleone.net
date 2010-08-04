@@ -1,0 +1,49 @@
+---
+title: Low Blow
+tags:  []
+layout: post
+description: A somewhat biased comparison between Internet Explorer and Safari.  The browser itself, not the rendering engine.
+comments: true
+---
+
+This is a low blow, but it's been awhile since I fired up a fresh Internet Explorer instance within a fresh Windows Virtual Machine.  And, *lo...*
+
+![Internet Explorer 8 in Windows 7](/assets/images/lowblow-ie.png "Internet Explorer 8 in Windows 7")
+
+Let's compare.
+
+![Safari 5 in OS X](/assets/images/lowblow-safari.png "Safari 5 in OS X")
+
+I'm not comparing rendering engines &mdash; I deliberately erased the content to cancel that variable.  No, I'm comparing the *browsers*.
+
+[Hanlon's Razor](http://en.wikipedia.org/wiki/Hanlon's_razor) can only *barely* slice into what could otherwise be interpreted as ill will toward users and near-total disregard for painstakingly-crafted Web content.  Yes, this is *personal*.
+
+###No hierarchy
+
+What's most important?  The complementary orange-on-blue Bing logo?  The favorites star?  Maybe that *other* favorites star with the arrow on it?  Or maybe that big red X in the corner?  They certainly all seem more exciting than your web page.
+
+###No grid
+
+Where are your readers' eyeballs, and why aren't they reading your site?  Maybe they're still bouncing around the pinball machine of overlapping, randomly placed, randomly sized toolbars.
+
+###Microsoft's Brand > Your Brand
+
+*While you're using it*, Safari does not care if you know its name or icon.
+
+###Your users are tired and scared
+
+That's right, they've been subconsciously fighting off the ever-encroaching onslaught of ambiguous and repetitious icons and statuses.
+
+"*Protected Mode On?*  Well that sounds good."
+
+"*Internet?*  Well, duh"
+
+"*100%?* A+, I guess."
+
+*And most personal of all...*
+
+###So much Color
+
+Ignoring the heinous gradients, consider the browser's bold and very specific coloring alone and how it thickly surrounds the entire page.  Now try to remember the last time you visited a museum that did *not* have pure white walls.
+
+Let's hope the Internet Explorer 9 team invests in the browser as much as they have already invested in its rendering engine.
