@@ -10,7 +10,7 @@ I'm Michael Monteleone, a passionate software developer and graphic designer fro
 
 While I have written software for multiple Fortune 500 companies and have had work featured in the Wall Street Journal, I don't expect you to be impressed by that.  I certainly wouldn't be.  
 
-Since graduating from [LSU](http://www.csc.lsu.edu/), I have lived in Baton Rouge and am marrying my beautiful and smart wife-to-be, Lindsay, this Fall.  In a past life, I was a painter and musician and hope to revisit both of these soon.
+Since graduating from [LSU](http://www.csc.lsu.edu/), I have lived in Baton Rouge, but I still refuse to call it home.  In a past life, I was a painter and musician and hope to revisit both of these soon.
 
 Mac.  TextMate (but I'm giving Vim the fair chance it deserves).  Visual Studio by day.
 
