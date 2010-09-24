@@ -16,7 +16,7 @@ end
 
 desc 'Build and deploy'
 task :deploy => :build do
-  sh 'rsync -rtzhavz --delete _site/ mmonteleone@newevestudio.com:domains/michaelmonteleone.net/public_html'
+  sh 'rsync -rtzhavz --delete _site/ root@michaelmonteleone.net:/srv/www/michaelmonteleone.net/public_html'
 end
 
 desc 'Minify JavaScript'
