@@ -23,6 +23,7 @@ bodyclass: projects
 * [jQuery.safetynet](http://github.com/mmonteleone/jquery.safetynet) <span>A smarter in-browser "unsaved changes" warning plugin</span>
 * [jQuery.autotype](http://github.com/mmonteleone/jquery.autotype) <span>Simple, accurate, typing simulation plugin</span>
 * [jQuery.netchanger](http://github.com/mmonteleone/jquery.netchanger) <span>Plugin enabling a rich extension to the DOM onchange event</span>
+* [jQuery.flextarea](http://github.com/mmonteleone/jquery.flextarea) <span>Smart HTML5-aware auto-resizing textarea  </span>
 * [jQuery.fasten](http://github.com/mmonteleone/jquery.fasten) <span>Slightly smarter fixed positioning plugin</span>
 * [jQuery.confine](http://github.com/mmonteleone/jquery.confine) <span>Textarea maxlength, Done Right</span>
 * [jQuery.updatepanel](http://github.com/mmonteleone/jquery.updatepanel) <span>proxies ASP.NET AJAX client-side events as native jQuery events via the jQuery Special Events API.</span>
