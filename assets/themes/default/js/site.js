@@ -522,7 +522,7 @@ jQuery(function($){
         // back-buttoned back in by modern browsers
         // which cache historical page state
         $(window).bind("unload", function(){
-            $(body).removeClass('open');
+            $('body').removeClass('open');
         });
         
         return this;
