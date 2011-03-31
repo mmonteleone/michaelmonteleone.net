@@ -484,10 +484,10 @@ nav#main_nav {
             #footer-wrapper footer h1 a:hover {
                 border-bottom: 0px;
                 }
-        footer section.delicious a {
+        footer section.bookmarks a {
             background-position: 0px -40px;
             }
-            footer section.delicious a:hover {
+            footer section.bookmarks a:hover {
                 background-position: 0px 0px;
                 }
         footer section.twitter a {

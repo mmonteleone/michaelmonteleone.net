@@ -12,6 +12,7 @@ author:
     twitter: http://twitter.com/namelessmike
     github: http://github.com/mmonteleone
     delicious: http://delicious.com/namelessmike
+    pinboard: http://pinboard.in/u:namelessmike
     facebook: http://www.facebook.com/michael.monteleone
     linkedin: http://www.linkedin.com/in/michaelmonteleone/
     avatar: http://www.gravatar.com/avatar/392da320b3aa4068d0b03024135875fb?s=70
@@ -28,7 +29,7 @@ stylesheets:
  - /assets/themes/default/css/print.css
 scripts:
  - http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js
- - /assets/themes/default/js/site.min.js?12454=12454
+ - /assets/themes/default/js/site.min.js?4151234=4151234
 colors:
     highlights:
         blue: '#009ff7'

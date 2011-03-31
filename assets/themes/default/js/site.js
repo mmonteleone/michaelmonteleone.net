@@ -47,8 +47,8 @@ jQuery(function($){
         columnWidth: 80
     });
     
-    // delicious integration
-    $('footer section.delicious nav').delicious({
+    // bookmarks integration
+    $('footer section.bookmarks nav').bookmarks({
         user: 'namelessmike',
         count: 6
     });
@@ -67,14 +67,15 @@ jQuery(function($){
 });
 
 
-
 (function($){
-    $.fn.delicious = function(options) {
-        var settings = $.extend({}, $.fn.delicious.defaults, options || {});        
+    $.fn.bookmarks = function(options) {
+        var settings = $.extend({}, $.fn.bookmarks.defaults, options || {});        
         var selection = this;
+		console.log('requesting');
         if(selection.length > 0) {
-            $.getJSON('http://feeds.delicious.com/v2/json/' + settings.user + '?count=' + settings.count + '&callback=?', 
+            $.getJSON(settings.service.replace(/\{USERNAME\}/gi,settings.user).replace(/\{COUNT\}/gi,settings.count), 
                 function(links){
+					console.log(links);
                     var list = $('<ul></ul>');
                     $.each(links, function(i, link) {
                         list.append('<li><a title="view this bookmark" href="'+link.u+'">'+link.d+'</a></li>');
@@ -84,13 +85,19 @@ jQuery(function($){
         }
         return selection;
     };
-    $.extend($.fn.delicious, {
+    $.extend($.fn.bookmarks, {
         defaults: {
             user: 'namelessmike',
-            count: 5
+            count: 5,
+			// pinboard service
+			service: 'http://feeds.pinboard.in/json/v1/u:{USERNAME}?count={COUNT}&cb=?'
+			// delicious service
+			// service: 'http://feeds.delicious.com/v2/json/{USERNAME}?count={COUNT}&callback=?'
         }
     });
 })(jQuery);
+
+
 
 /**
  * Simplistic translation between pure-js-based jquery animation to native css3-based transforms
