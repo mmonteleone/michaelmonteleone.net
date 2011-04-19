@@ -71,11 +71,9 @@ jQuery(function($){
     $.fn.bookmarks = function(options) {
         var settings = $.extend({}, $.fn.bookmarks.defaults, options || {});        
         var selection = this;
-		console.log('requesting');
         if(selection.length > 0) {
             $.getJSON(settings.service.replace(/\{USERNAME\}/gi,settings.user).replace(/\{COUNT\}/gi,settings.count), 
                 function(links){
-					console.log(links);
                     var list = $('<ul></ul>');
                     $.each(links, function(i, link) {
                         list.append('<li><a title="view this bookmark" href="'+link.u+'">'+link.d+'</a></li>');
