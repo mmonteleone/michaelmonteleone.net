@@ -32,11 +32,3 @@ bodyclass: projects
 
 * [ColorScrub](http://github.com/mmonteleone/colorscrub) <span>Simple pure-javascript tool for quickly viewing and sharing a local or remote color palette</span>
 * [Monokai-VS](http://github.com/mmonteleone/monokai-vs) <span>Monokai color theme for Visual Studio 2010 and 2008</span>
-
-## Design
-
-*Coming Soon&trade;*
-
-## Professional
-
-*Mostly confidential, but some Coming Soon.&trade;*
